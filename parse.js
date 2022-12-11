@@ -50,18 +50,18 @@ function parse(data) {
     throw new Error("Invalid hex string");
   }
   return {
-    companyID: hexToDec(data.substr(0, 4)),
-    lettaPrefix: hexToDec(data.substr(4, 4)),
-    hardwareVersion: hexToDec(data.substr(8, 2)),
-    firmwareVersion: hexToDec(data.substr(10, 2)),
-    customDataArea1: hexToDec(data.substr(12, 4)),
-    customDataArea2: hexToDec(data.substr(16, 4)),
-    buttonState: hexToDec(data.substr(20, 2)),
-    batteryLevel: hexToDec(data.substr(22, 2)),
-    rssi: hexToDec(data.substr(24, 2)),
-    txPower: hexToDec(data.substr(26, 2)),
-    motionStatus: hexToDec(data.substr(28, 2)),
-    reserved: hexToDec(data.substr(30, 2)),
+    companyID: hexToDec(data.substr(2, 4)),
+    lettaPrefix: hexToDec(data.substr(6, 4)),
+    hardwareVersion: hexToDec(data.substr(10, 2)),
+    firmwareVersion: hexToDec(data.substr(12, 2)),
+    customDataArea1: hexToDec(data.substr(14, 4)),
+    customDataArea2: hexToDec(data.substr(18, 4)),
+    buttonState: hexToDec(data.substr(22, 2)),
+    batteryLevel: hexToDec(data.substr(24, 2)),
+    rssi: hexToDec(data.substr(26, 2)),
+    txPower: hexToDec(data.substr(28, 2)),
+    motionStatus: hexToDec(data.substr(30, 2)),
+    reserved: hexToDec(data.substr(32, 2))
   };
 }
 
