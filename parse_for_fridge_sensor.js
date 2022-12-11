@@ -34,34 +34,34 @@
 */
 
 function hexToDec(hex) {
-    return parseInt(hex, 16);
+  return parseInt(hex, 16);
 }
 
 function parse(data) {
-    // check if the string is 32 + 2 characters long
-    if (data.length !== 48) {
-        throw new Error("Invalid string length");
-    }
-    // check if the string is a hex string
-    // substr(2, 33) to skip the 0x prefix
-    if (!/^[0-9A-Fa-f]+$/.test(data.substr(2, 45))) {
-        throw new Error("Not a hex string");
-    }
-    return {
-        companyID: hexToDec(data.substr(2, 4)),
-        lettaPrefix: hexToDec(data.substr(6, 4)),
-        hardwareVersion: hexToDec(data.substr(10, 2)),
-        firmwareVersion: hexToDec(data.substr(12, 2)),
-        projectID: hexToDec(data.substr(14, 2)),
-        temperature: hexToDec(data.substr(16, 4)) / 100,
-        humidity: hexToDec(data.substr(20, 4)) / 100,
-        doorState: hexToDec(data.substr(24, 2)),
-        doorOpenCount: hexToDec(data.substr(26, 8)),
-        doorOpenTime: hexToDec(data.substr(34, 8)),
-        buttonPressCount: hexToDec(data.substr(42, 2)),
-        batteryLevel: hexToDec(data.substr(44, 2)),
-        reserved: hexToDec(data.substr(46, 2))
-    };
+  // check if the string is 23*2 + 2 characters long
+  if (data.length !== 48) {
+    throw new Error("Invalid string length");
+  }
+  // check if the string is a hex string
+  // substr(2, 33) to skip the 0x prefix
+  if (!/^[0-9A-Fa-f]+$/.test(data.substr(2, 45))) {
+    throw new Error("Not a hex string");
+  }
+  return {
+    companyID: hexToDec(data.substr(2, 4)),
+    lettaPrefix: hexToDec(data.substr(6, 4)),
+    hardwareVersion: hexToDec(data.substr(10, 2)),
+    firmwareVersion: hexToDec(data.substr(12, 2)),
+    projectID: hexToDec(data.substr(14, 2)),
+    temperature: hexToDec(data.substr(16, 4)) / 100,
+    humidity: hexToDec(data.substr(20, 4)) / 100,
+    doorState: hexToDec(data.substr(24, 2)),
+    doorOpenCount: hexToDec(data.substr(26, 8)),
+    doorOpenTime: hexToDec(data.substr(34, 8)),
+    buttonPressCount: hexToDec(data.substr(42, 2)),
+    batteryLevel: hexToDec(data.substr(44, 2)),
+    reserved: hexToDec(data.substr(46, 2)),
+  };
 }
 
 console.log(parse("0xFFFF4C540101030F69138801000000050000001E006400"));

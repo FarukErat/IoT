@@ -40,7 +40,7 @@ function hexToDec(hex) {
  * @param string A string to convert into a JSON object.
  */
 function parse(data) {
-  // check if the string is 32 + 2 characters long
+  // check if the string is 16*2 + 2 characters long
   if (data.length !== 34) {
     throw new Error("Invalid string length");
   }
