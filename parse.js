@@ -7,7 +7,7 @@
 // Byte[9:10]   Custom Data Area-2   0x0000
 // Byte[11]     Button State         Between 0x00 and 0x03
 // Byte[12]     Battery Level        Between 0x00 and 0x64
-// Byte[13]     RSSI @1m 0xC4        (As Decimal : -60)
+// Byte[13]     RSSI @1m             0xC4 (As Decimal : -60)
 // Byte[14]     TX Power             0xEC for -20dbM ; 0x00 for 0dbM
 // Byte[15]     Motion Status        When motion detect 0x01; normally 0x00
 // Byte[16]     Reserved             0x00
