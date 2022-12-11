@@ -16,16 +16,16 @@
 // sample output:
 /*
 {
-  companyID: 255,
-  lettaPrefix: 65356,
-  hardwareVersion: 84,
+  companyID: 65535,
+  lettaPrefix: 19540,
+  hardwareVersion: 1,
   firmwareVersion: 1,
-  customDataArea1: 329,
-  customDataArea2: 13312,
-  buttonState: 0,
-  batteryLevel: 2,
-  rssi: 100,
-  txPower: 196,
+  customDataArea1: 18740,
+  customDataArea2: 0,
+  buttonState: 2,
+  batteryLevel: 100,
+  rssi: 196,
+  txPower: 0,
   motionStatus: 0,
   reserved: 0
 }
