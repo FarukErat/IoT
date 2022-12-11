@@ -42,12 +42,12 @@ function hexToDec(hex) {
 function parse(data) {
   // check if the string is 32 + 2 characters long
   if (data.length !== 34) {
-    throw new Error("Invalid hex string length");
+    throw new Error("Invalid string length");
   }
   // check if the string is a hex string
   // substr(2, 33) to skip the 0x prefix
   if (!/^[0-9A-Fa-f]+$/.test(data.substr(2, 33))) {
-    throw new Error("Invalid hex string");
+    throw new Error("Not a hex string");
   }
   return {
     companyID: hexToDec(data.substr(2, 4)),
