@@ -35,12 +35,12 @@ function parse(data) {
     return {
         advA: hexToDec(data.substr(2, 2)),
         advFlags: hexToDec(data.substr(4, 6)),
-        id: hexToDec(data.substr(10, 8)),
+        id: data.substr(10, 8),
         length: hexToDec(data.substr(18, 2)),
         advType: hexToDec(data.substr(20, 2)),
-        uuid: hexToDec(data.substr(22, 4)),
+        uuid: data.substr(22, 4),
         frameType: hexToDec(data.substr(26, 2)),
-        modelID: hexToDec(data.substr(28, 2)),
+        modelID: data.substr(28, 2),
         batteryLevel: hexToDec(data.substr(30, 2)),
         macAddress: data.substr(32, 12),
         softwareVersion: hexToDec(data.substr(44, 4))
