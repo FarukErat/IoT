@@ -50,7 +50,7 @@ function parse(data) {
     throw new Error("Not a hex string");
   }
   return {
-    companyID: hexToDec(data.substr(2, 4)),
+    companyID: data.substr(2, 4),
     lettaPrefix: hexToDec(data.substr(6, 4)),
     hardwareVersion: hexToDec(data.substr(10, 2)),
     firmwareVersion: hexToDec(data.substr(12, 2)),
