@@ -48,11 +48,11 @@ function parse(data) {
     throw new Error("Not a hex string");
   }
   return {
-    companyID: hexToDec(data.substr(2, 4)),
+    companyID: data.substr(2, 4),
     lettaPrefix: hexToDec(data.substr(6, 4)),
     hardwareVersion: hexToDec(data.substr(10, 2)),
     firmwareVersion: hexToDec(data.substr(12, 2)),
-    projectID: hexToDec(data.substr(14, 2)),
+    projectID: data.substr(14, 2),
     temperature: hexToDec(data.substr(16, 4)) / 100,
     humidity: hexToDec(data.substr(20, 4)) / 100,
     doorState: hexToDec(data.substr(24, 2)),
